@@ -1,25 +1,32 @@
 {
-  "name": "refreshTokenAuth",
+  "name": "nodejs-jwt-refresh-token-mongo",
   "version": "1.0.0",
-  "description": "",
+  "description": "User Management NodeJS + JWT + MongoDB + Refresh Token Send On Token Header Body",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "jwt",
+    "refresh",
+    "token",
+    "mongodb"
+  ],
+  "author": "Suphachai Pinhom",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "joi": "^17.6.0",
     "joi-password-complexity": "^5.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.1",
     "mongoose": "^6.2.9"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^3.0.1"
   }
 }

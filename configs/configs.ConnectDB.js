@@ -1,8 +1,13 @@
 import mongoose from "mongoose";
 
-const dbConnect = () => {
-	const connectionParams = { useNewUrlParser: true };
-	mongoose.connect(process.env.DB, connectionParams);
+const ConectDB = () => {
+	const connectionParams = { 
+		useNewUrlParser: true,
+		dbName: process.env.DB_NAME
+	};
+	mongoose.set('strictQuery', false);
+
+	mongoose.connect(process.env.DB_URI, connectionParams);
 
 	mongoose.connection.on("connected", () => {
 		console.log("Connected to database sucessfully");
@@ -17,4 +22,4 @@ const dbConnect = () => {
 	});
 };
 
-export default dbConnect;
+export default ConectDB;

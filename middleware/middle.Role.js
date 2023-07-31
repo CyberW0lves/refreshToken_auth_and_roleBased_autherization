@@ -4,7 +4,7 @@ const roleCheck = (roles) => {
 		if (req.user.roles.includes(...roles)) {
 			next();
 		} else {
-			res.status(403).json({ error: true, message: "You are not authorized" });
+			res.status(403).json({ status: false, message: "You are not authorized" });
 		}
 	};
 };
